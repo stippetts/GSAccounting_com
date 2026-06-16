@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; form-action 'self' mailto:; frame-ancestors 'self'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; form-action 'self' mailto:; frame-ancestors 'self'" />
 <meta name="description" content="G&S Accounting, Inc. — a licensed CPA firm serving Idaho small businesses and families since 1996. Tax prep & planning, bookkeeping, payroll, and small-business advisory." />
 <meta name="theme-color" content="#20453b" />
 <title>G&amp;S Accounting, Inc. — Idaho CPA since 1996</title>
@@ -532,6 +532,60 @@
   </div>
 </footer>
 
-<script src="script.js" defer></script>
+<script>
+  "use strict";
+  (function () {
+    var toggle = document.getElementById("navToggle");
+    var links = document.getElementById("navLinks");
+    function setOpen(open) {
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      links.hidden = !open;
+    }
+    function syncForViewport() {
+      if (window.matchMedia("(max-width: 860px)").matches) {
+        if (toggle.getAttribute("aria-expanded") !== "true") links.hidden = true;
+      } else {
+        links.hidden = false;
+      }
+    }
+    toggle.addEventListener("click", function () {
+      setOpen(toggle.getAttribute("aria-expanded") !== "true");
+    });
+    links.addEventListener("click", function (e) {
+      if (e.target.closest("a") && window.matchMedia("(max-width: 860px)").matches) setOpen(false);
+    });
+    window.addEventListener("resize", syncForViewport);
+    syncForViewport();
+  })();
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  (function () {
+    var form = document.getElementById("bookForm");
+    var ok = document.getElementById("formOk");
+    var OFFICE_EMAIL = "office@gsaccounting.com";
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = form.name.value.trim();
+      var email = form.email.value.trim();
+      if (!name || !email) {
+        (name ? form.email : form.name).focus();
+        return;
+      }
+      var body =
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Phone: " + form.phone.value.trim() + "\n" +
+        "Needs help with: " + form.help.value + "\n\n" +
+        (form.message.value.trim() || "(no additional details)");
+      var href = "mailto:" + OFFICE_EMAIL +
+        "?subject=" + encodeURIComponent("Consultation request — " + name) +
+        "&body=" + encodeURIComponent(body);
+      ok.hidden = false;
+      window.location.href = href;
+    });
+  })();
+</script>
 </body>
 </html>
