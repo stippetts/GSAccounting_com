@@ -4,30 +4,31 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; form-action 'self' mailto:; frame-ancestors 'self'" />
-<meta name="description" content="Privacy Policy and Terms of Service for G&S Accounting, Inc. — Idaho CPA firm." />
+<meta name="description" content="Privacy Policy and Terms of Service for G&S Accounting, Inc. — Idaho accounting firm." />
 <meta name="robots" content="noindex" />
-<meta name="theme-color" content="#20453b" />
+<meta name="theme-color" content="#2b4257" />
 <title>Privacy Policy &amp; Terms of Service — G&amp;S Accounting, Inc.</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%2320453b%27/%3E%3Cpath d=%27M12 44L28 24L40 38L52 20%27 fill=%27none%27 stroke=%27%23f7e0b5%27 stroke-width=%274%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3Ccircle cx=%2752%27 cy=%2714%27 r=%276%27 fill=%27%23b07d2e%27/%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%232b4257%27/%3E%3Cpath d=%27M12 44L28 24L40 38L52 20%27 fill=%27none%27 stroke=%27%236da7cc%27 stroke-width=%274%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3Ccircle cx=%2752%27 cy=%2714%27 r=%276%27 fill=%27%2388a9c3%27/%3E%3C/svg%3E" />
 <style>
   :root {
-    --spruce:    #20453b;
-    --pine:      #2f5d50;
-    --ink:       #15241f;
-    --stone:     #eef1ee;
-    --mist:      #dfe6e1;
+    --spruce:    #2b4257;
+    --pine:      #345e7d;
+    --ink:       #1c2d3d;
+    --stone:     #e3ebf2;
+    --mist:      #cddae8;
     --paper:     #ffffff;
-    --brass:     #b07d2e;
-    --brass-txt: #875a1c;
-    --line:      #cbd6cf;
-    --muted:     #51635b;
-    --font-display: Georgia, "Times New Roman", serif;
+    --accent:    #6da7cc;
+    --accent-lt: #88a9c3;
+    --accent-txt:#345e7d;
+    --line:      #b8cedd;
+    --muted:     #4e7293;
+    --font-display: "Copperplate Gothic Bold", "Copperplate Gothic", Copperplate, "Copperplate Gothic Light", "Book Antiqua", Palatino, serif;
     --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
     --maxw: 72rem;
     --gutter: clamp(1.25rem, 5vw, 4rem);
     --radius: 10px;
-    --shadow: 0 1px 2px rgba(21,36,31,.06), 0 18px 40px -30px rgba(21,36,31,.5);
+    --shadow: 0 1px 2px rgba(28,45,61,.06), 0 18px 40px -30px rgba(28,45,61,.45);
   }
 
   *, *::before, *::after { box-sizing: border-box; }
@@ -44,9 +45,16 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.08; letter-spacing: -0.01em; color: var(--spruce); }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+    color: var(--spruce);
+    text-transform: uppercase;
+  }
   p { margin: 0 0 1rem; }
-  a { color: var(--spruce); }
+  a { color: var(--pine); }
 
   img { max-width: 100%; height: auto; display: block; }
 
@@ -58,7 +66,7 @@
   }
   .skip:focus { left: 0; }
 
-  :focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; border-radius: 3px; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
 
   .wrap { max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
 
@@ -66,12 +74,14 @@
     display: inline-flex; align-items: center; gap: .5rem;
     font-family: var(--font-body); font-weight: 600; font-size: 1rem;
     padding: .85rem 1.4rem; border-radius: 999px; cursor: pointer;
-    text-decoration: none; border: 2px solid transparent; transition: background .15s ease, color .15s ease;
+    text-decoration: none; border: 2px solid transparent;
+    transition: transform .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease;
   }
-  .btn--primary { background: var(--brass); color: var(--paper); border-color: var(--brass); }
-  .btn--primary:hover { background: color-mix(in srgb, var(--brass) 85%, var(--ink) 15%); }
+  .btn--primary { background: var(--accent); color: var(--ink); border-color: var(--accent); }
+  .btn--primary:hover { background: color-mix(in srgb, var(--accent) 78%, var(--spruce)); border-color: color-mix(in srgb, var(--accent) 78%, var(--spruce)); color: var(--ink); transform: translateY(-2px); box-shadow: 0 6px 20px -4px rgba(43,66,87,.35); }
   .btn--ghost { background: transparent; color: var(--spruce); border-color: var(--spruce); }
-  .btn--ghost:hover { background: var(--spruce); color: var(--stone); }
+  .btn--ghost:hover { background: var(--spruce); color: var(--stone); transform: translateY(-2px); }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: background .15s ease, color .15s ease; } .btn:hover { transform: none; box-shadow: none; } }
 
   /* ── Nav ── */
   .site-header {
@@ -86,12 +96,12 @@
   }
   .brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; color: var(--spruce); }
   .brand img { width: 44px; height: 44px; }
-  .brand__name { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; line-height: 1; }
+  .brand__name { font-family: var(--font-display); font-weight: 700; font-size: 1rem; line-height: 1; letter-spacing: .06em; text-transform: uppercase; }
   .brand__sub { font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
   .nav__spacer { flex: 1; }
   .nav__links { display: flex; gap: 1.5rem; align-items: center; }
   .nav__links a { text-decoration: none; color: var(--ink); font-weight: 500; }
-  .nav__links a:hover { color: var(--brass-txt); }
+  .nav__links a:hover { color: var(--pine); }
   .nav__call { font-family: var(--font-mono); font-weight: 600; white-space: nowrap; }
   .nav__toggle {
     display: none; background: none; border: 2px solid var(--line);
@@ -118,8 +128,8 @@
     border-bottom: 1px solid var(--line);
     padding-block: clamp(2.5rem, 6vw, 4rem);
   }
-  .page-hero h1 { font-size: clamp(1.8rem, 1.3rem + 2.5vw, 2.8rem); margin: 0 0 .6rem; }
-  .page-hero p { color: var(--muted); max-width: 44rem; margin: 0; }
+  .page-hero h1 { font-size: clamp(1.6rem, 1.1rem + 2.5vw, 2.4rem); margin: 0 0 .6rem; }
+  .page-hero p { color: var(--muted); max-width: 44rem; margin: 0; font-family: var(--font-body); text-transform: none; letter-spacing: normal; font-weight: 400; font-size: 1rem; }
 
   /* ── Jump links ── */
   .page-nav {
@@ -130,7 +140,7 @@
   }
   .page-nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 1.5rem; flex-wrap: wrap; }
   .page-nav a { color: var(--spruce); font-weight: 600; text-decoration: none; }
-  .page-nav a:hover { color: var(--brass-txt); text-decoration: underline; }
+  .page-nav a:hover { color: var(--pine); text-decoration: underline; }
 
   /* ── Legal prose ── */
   .legal-body { padding-block: clamp(3rem, 7vw, 5rem); }
@@ -142,28 +152,28 @@
   }
   .legal-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .legal-section > h2 {
-    font-size: clamp(1.5rem, 1.1rem + 2vw, 2rem);
+    font-size: clamp(1.4rem, 1rem + 2vw, 2rem);
     margin: 0 0 .5rem;
     padding-bottom: .6rem;
-    border-bottom: 2px solid var(--brass);
+    border-bottom: 2px solid var(--accent);
     display: inline-block;
   }
-  .legal-section .effective { color: var(--muted); font-size: .88rem; margin: .4rem 0 1.75rem; }
+  .legal-section .effective { color: var(--muted); font-size: .88rem; margin: .4rem 0 1.75rem; font-family: var(--font-body); text-transform: none; letter-spacing: normal; }
   .legal-section h3 {
-    font-family: var(--font-body); font-size: 1rem; font-weight: 700;
+    font-family: var(--font-display); font-size: .88rem; font-weight: 700;
     text-transform: uppercase; letter-spacing: .06em;
     color: var(--spruce); margin: 1.75rem 0 .5rem;
   }
-  .legal-section p, .legal-section li { color: var(--muted); }
+  .legal-section p, .legal-section li { color: var(--muted); font-family: var(--font-body); text-transform: none; letter-spacing: normal; font-weight: 400; }
   .legal-section ul, .legal-section ol { padding-left: 1.4rem; margin: 0 0 1rem; }
   .legal-section li { margin-bottom: .35rem; }
   .legal-section strong { color: var(--ink); }
-  .legal-section a { color: var(--brass-txt); }
+  .legal-section a { color: var(--accent-txt); }
 
   .sms-notice {
-    background: color-mix(in srgb, var(--brass) 10%, var(--paper));
-    border: 1px solid color-mix(in srgb, var(--brass) 40%, var(--line));
-    border-left: 3px solid var(--brass);
+    background: color-mix(in srgb, var(--accent) 10%, var(--paper));
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
+    border-left: 3px solid var(--accent);
     border-radius: 0 var(--radius) var(--radius) 0;
     padding: 1rem 1.15rem;
     margin: 1.25rem 0;
@@ -176,17 +186,18 @@
   @media (max-width: 720px) { .footer { grid-template-columns: 1fr 1fr; } .footer__brand { grid-column: 1 / -1; } }
   .footer__brand { display: flex; gap: 1rem; align-items: flex-start; }
   .footer__brand img { width: 64px; height: 64px; flex: none; }
-  .footer__brand .brand__name { color: var(--stone); font-size: 1.2rem; }
-  .footer__brand p { color: color-mix(in srgb, var(--mist) 85%, transparent); font-size: .9rem; max-width: 26ch; margin: .4rem 0 0; }
-  .footer h4 { font-family: var(--font-body); text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; color: var(--brass-l, #e3b768); margin: 0 0 1rem; }
+  .footer__brand .brand__name { color: var(--stone); font-size: 1rem; }
+  .footer__brand p { color: color-mix(in srgb, var(--mist) 85%, transparent); font-size: .9rem; max-width: 26ch; margin: .4rem 0 0; font-family: var(--font-body); text-transform: none; letter-spacing: normal; font-weight: 400; }
+  .footer h4 { font-family: var(--font-display); text-transform: uppercase; letter-spacing: .1em; font-size: .75rem; color: var(--accent-lt); margin: 0 0 1rem; }
   .footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .55rem; }
-  .footer a { color: var(--mist); text-decoration: none; }
+  .footer a { color: var(--mist); text-decoration: none; font-family: var(--font-body); font-weight: 400; letter-spacing: normal; text-transform: none; }
   .footer a:hover { color: #fff; text-decoration: underline; }
   .footer__legal {
     border-top: 1px solid color-mix(in srgb, var(--mist) 25%, transparent);
     margin-top: 2.5rem; padding-top: 1.5rem; font-size: .82rem;
     color: color-mix(in srgb, var(--mist) 75%, transparent);
     display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between;
+    font-family: var(--font-body); text-transform: none; letter-spacing: normal;
   }
   .footer__legal a { color: inherit; text-decoration: underline; }
   .footer__legal a:hover { color: #fff; }
@@ -198,10 +209,10 @@
 <header class="site-header">
   <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="G&amp;S Accounting, home">
-      <img src="images/Logo.png" width="44" height="44" alt="G&amp;S Accounting seal" />
+      <img src="images/LOGO-Trans.png" width="44" height="44" alt="G&amp;S Accounting seal" />
       <span>
         <span class="brand__name">G&amp;S Accounting</span><br />
-        <span class="brand__sub">CPA · Est. 1996</span>
+        <span class="brand__sub">Est. 1996</span>
       </span>
     </a>
     <span class="nav__spacer"></span>
@@ -261,7 +272,7 @@
           <li>Respond to your inquiries and consultation requests</li>
           <li>Schedule and confirm appointments</li>
           <li>Send appointment reminders, tax deadline notifications, and account-related updates</li>
-          <li>Provide accounting, tax preparation, bookkeeping, payroll, and advisory services</li>
+          <li>Provide accounting, tax preparation, bookkeeping, and advisory services</li>
           <li>Comply with applicable legal and regulatory obligations</li>
         </ul>
 
@@ -315,7 +326,7 @@
         <p>These Terms of Service ("Terms") govern your use of the G&amp;S Accounting, Inc. website and the services we offer. By using our website or engaging our services, you agree to these Terms.</p>
 
         <h3>1. About Our Services</h3>
-        <p>G&amp;S Accounting, Inc. is a licensed CPA firm serving individuals, families, and small businesses in Idaho. Our services include tax preparation and planning, bookkeeping, payroll processing, and small-business advisory services.</p>
+        <p>G&amp;S Accounting, Inc. is an accounting firm serving individuals, families, and small businesses in Idaho. Our services include tax preparation and planning, bookkeeping, and small-business advisory services.</p>
         <p>Information provided on this website is for general informational purposes only and does not constitute professional tax or legal advice for your specific situation. A formal engagement agreement establishes a professional client relationship.</p>
 
         <h3>2. SMS Terms &amp; Conditions</h3>
@@ -368,10 +379,10 @@
   <div class="wrap">
     <div class="footer">
       <div class="footer__brand">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2320453b'/%3E%3Cpath d='M12 48L24 32L36 44L52 24' fill='none' stroke='%23f7e0b5' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='52' cy='18' r='6' fill='%23b07d2e'/%3E%3C/svg%3E" width="64" height="64" loading="lazy" alt="G&amp;S Accounting seal" />
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b4257'/%3E%3Cpath d='M12 48L24 32L36 44L52 24' fill='none' stroke='%236da7cc' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='52' cy='18' r='6' fill='%2388a9c3'/%3E%3C/svg%3E" width="64" height="64" loading="lazy" alt="G&amp;S Accounting seal" />
         <div>
           <span class="brand__name">G&amp;S Accounting, Inc.</span>
-          <p>Taxes &amp; small-business consulting for Idaho, since 1996.</p>
+          <p>Tax prep &amp; small-business accounting for Idaho, since 1996.</p>
         </div>
       </div>
       <div>
@@ -379,7 +390,6 @@
         <ul>
           <li><a href="index.html#services">Tax prep &amp; planning</a></li>
           <li><a href="index.html#services">Bookkeeping</a></li>
-          <li><a href="index.html#services">Payroll</a></li>
           <li><a href="index.html#services">Advisory</a></li>
         </ul>
       </div>
@@ -395,7 +405,7 @@
       </div>
     </div>
     <div class="footer__legal">
-      <span>&copy; <span id="year">2026</span> G&amp;S Accounting, Inc. · Licensed CPA</span>
+      <span>&copy; <span id="year">2026</span> G&amp;S Accounting, Inc. · Serving Idaho since 1996</span>
       <span><a href="#privacy">Privacy Policy</a> · <a href="#terms">Terms of Service</a></span>
     </div>
   </div>
