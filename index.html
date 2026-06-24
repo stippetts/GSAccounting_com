@@ -4,9 +4,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; form-action 'self' mailto:; frame-ancestors 'self'" />
-<meta name="description" content="G&S Accounting, Inc. — an accounting firm serving Idaho small businesses and families since 1996. Tax prep &amp; planning, bookkeeping, and small-business advisory." />
+<meta name="description" content="G&S Accounting, Inc. — tax preparation, planning, and small-business advisory for Idaho farms, ranches, and small businesses since 1996." />
 <meta name="theme-color" content="#2b4257" />
-<title>G&amp;S Accounting, Inc. — Idaho Accountants since 1996</title>
+<title>G&amp;S Accounting, Inc. — Idaho Small Business &amp; Agriculture Accounting</title>
 <link rel="preload" href="images/LOGO-Trans.png" as="image" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%232b4257%27/%3E%3Cpath d=%27M12 44L28 24L40 38L52 20%27 fill=%27none%27 stroke=%27%236da7cc%27 stroke-width=%274%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3Ccircle cx=%2752%27 cy=%2714%27 r=%276%27 fill=%27%2388a9c3%27/%3E%3C/svg%3E" />
 <style>
@@ -148,9 +148,13 @@
   .ridge path { fill: none; stroke: currentColor; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
   .ridge .ridge__fill { fill: var(--mist); stroke: none; }
   .ridge .ridge__sun { fill: var(--accent); stroke: none; }
+  .ridge .ridge__farm * { fill: var(--spruce); stroke: none; }
+  .ridge .ridge__farm .ridge__door { fill: color-mix(in srgb, var(--mist) 55%, var(--spruce)); }
+  .ridge .ridge__fence { stroke-width: 1.5; }
   @media (prefers-reduced-motion: no-preference) {
-    .ridge .ridge__line { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: draw 2.2s ease forwards .2s; }
-    .ridge .ridge__sun { opacity: 0; animation: rise 1s ease forwards 1.6s; }
+    .ridge .ridge__line { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: draw 4s ease-in-out forwards .2s; }
+    .ridge .ridge__sun { opacity: 0; animation: rise 1s ease forwards 2.8s; }
+    .ridge .ridge__farm { opacity: 0; animation: rise 1.2s ease forwards 3.4s; }
   }
   @keyframes draw { to { stroke-dashoffset: 0; } }
   @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
@@ -354,24 +358,32 @@
   <!-- ===================== HERO ===================== -->
   <section class="hero">
     <div class="wrap hero__inner">
-      <p class="eyebrow">Serving Idaho since 1996</p>
-      <h1>Taxes and books — handled by accountants who <em>know your name</em>.</h1>
-      <p class="hero__lead">For nearly thirty years, G&amp;S Accounting has kept Idaho families and small businesses on steady footing. No call centers, no revolving door — just clear answers from people who actually pick up the phone.</p>
+      <p class="eyebrow">Small Business &amp; Agriculture · Idaho since 1996</p>
+      <h1>Tax and planning — for Idaho farms, ranches, and small businesses who <em>know their numbers matter</em>.</h1>
+      <p class="hero__lead">For nearly thirty years, G&amp;S Accounting has been the firm Idaho farmers, ranchers, and small-business owners call first. No call centers, no revolving door — just clear answers from people who understand your operation.</p>
       <div class="hero__actions">
-        <a class="btn btn--primary" href="#contact">Book a free consultation</a>
+        <a class="btn btn--primary" href="#contact">Book a $100 Consultation</a>
         <a class="btn btn--ghost" href="tel:+12083653239">Call (208) 365-3239</a>
       </div>
       <p class="hero__trust">
         <span>Tax prep &amp; planning</span>
-        <span>Bookkeeping</span>
-        <span>Small-business advisory</span>
+        <span>Ag &amp; small-business advisory</span>
+        <span>Farm &amp; ranch tax specialists</span>
       </p>
     </div>
 
-    <svg class="ridge" viewBox="0 0 1200 220" preserveAspectRatio="none" role="img" aria-label="Mountain ridgeline">
-      <path class="ridge__fill" d="M0 220 L0 150 L150 120 L300 165 L470 95 L640 150 L820 70 L1000 140 L1200 100 L1200 220 Z" />
-      <circle class="ridge__sun" cx="980" cy="60" r="18" />
-      <path class="ridge__line" d="M0 150 L150 120 L300 165 L470 95 L640 150 L820 70 L1000 140 L1200 100" />
+    <svg class="ridge" viewBox="0 0 1200 220" preserveAspectRatio="none" role="img" aria-label="Idaho farmland scene with barn and silo">
+      <path class="ridge__fill" d="M0 220 L0 183 Q150 179 350 181 Q520 183 650 177 Q710 173 762 171 Q900 166 1200 163 L1200 220 Z" />
+      <circle class="ridge__sun" cx="1050" cy="58" r="18" />
+      <g class="ridge__farm">
+        <rect x="660" y="134" width="96" height="48" />
+        <polygon points="647,134 708,97 773,134" />
+        <rect class="ridge__door" x="692" y="155" width="30" height="27" />
+        <rect x="776" y="114" width="27" height="68" />
+        <path d="M776 114 Q789.5 103 803 114 Z" />
+      </g>
+      <path class="ridge__fence" d="M55 183 L55 197 M145 182 L145 196 M235 182 L235 196 M325 182 L325 196 M415 181 L415 195 M505 181 L505 195 M595 180 L595 194" />
+      <path class="ridge__line" d="M0 183 Q150 179 350 181 Q520 183 650 177 Q710 173 762 171 Q900 166 1200 163" />
     </svg>
   </section>
 
@@ -379,24 +391,19 @@
     <div class="wrap">
       <div class="section__head" data-reveal>
         <p class="eyebrow">What we do</p>
-        <h2>Three ways we keep your numbers in line</h2>
-        <p>Whether it's one return a year or your whole back office, you work with the same firm — start to finish.</p>
+        <h2>Two ways we keep your operation on solid ground</h2>
+        <p>Whether you're filing one return or planning the next five years, you work with the same firm — start to finish.</p>
       </div>
       <div class="services">
         <article class="card" data-reveal data-delay="1">
           <svg class="card__mark" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h11l5 5v21H9z"/><path d="M20 3v5h5M13 16h8M13 21h8M13 11h3"/></svg>
           <h3>Tax prep &amp; planning</h3>
-          <p>Personal and business returns filed right — plus a year-round plan so next April stops being a surprise.</p>
+          <p>Farm, ranch, and small-business returns filed right — plus year-round planning so depreciation, equipment purchases, and harvest income never catch you off guard.</p>
         </article>
         <article class="card" data-reveal data-delay="2">
-          <svg class="card__mark" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h24v18H4z"/><path d="M4 12h24M9 18h6M9 21h10"/></svg>
-          <h3>Bookkeeping</h3>
-          <p>Clean, current books you can actually read — so you always know exactly where the business stands.</p>
-        </article>
-        <article class="card" data-reveal data-delay="3">
           <svg class="card__mark" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 26l7-7 5 5 10-12"/><path d="M27 12h-5M27 12v5"/></svg>
-          <h3>Small-business advisory</h3>
-          <p>A steady sounding board for the real decisions — entity setup, hiring, growth, and the big purchases.</p>
+          <h3>Small-business &amp; Ag advisory</h3>
+          <p>A steady sounding board for the decisions that matter — entity structure, land purchases, succession planning, hiring, and growth strategy for farms and small businesses alike.</p>
         </article>
       </div>
     </div>
@@ -405,16 +412,16 @@
   <section class="section" id="about">
     <div class="wrap about">
       <div data-reveal>
-        <p class="eyebrow">Since 1996</p>
-        <h2>A local firm that's still local.</h2>
-        <p>When you call G&amp;S Accounting, you reach the people who do the work — not a queue, not a different rep every quarter. We've watched a lot of Idaho businesses get started, grow up, and hand off to the next generation, and we've sat at the table for the hard years too.</p>
-        <p>You get the expertise of experienced accounting professionals without the big-firm runaround: plain-English answers, fair fees you'll know up front, and someone who remembers your situation in November as well as they did in April.</p>
+        <p class="eyebrow">Small Business &amp; Agriculture · Since 1996</p>
+        <h2>A local firm that knows the land and the ledger.</h2>
+        <p>When you call G&amp;S Accounting, you reach the people who do the work — not a queue, not a different rep every quarter. We've worked alongside Idaho farmers, ranchers, and small-business owners through good harvests and hard ones, start-ups and successions.</p>
+        <p>Agricultural tax has its own rules — Schedule F, Section 179, drought-sale deferrals, land basis. We know them. You get straight answers, fair fees up front, and someone who still remembers your situation come November.</p>
         <a class="btn btn--ghost" href="#contact">Come in and talk it through</a>
       </div>
       <ul class="about__facts">
-        <li data-reveal data-delay="2"><b>Est. 1996</b><span>Nearly three decades serving the same communities.</span></li>
-        <li data-reveal data-delay="3"><b>Year-round</b><span>We're here in June, not just at the tax deadline.</span></li>
-        <li data-reveal data-delay="4"><b>Owners &amp; families</b><span>From sole proprietors to growing crews — and the people behind them.</span></li>
+        <li data-reveal data-delay="2"><b>Est. 1996</b><span>Nearly three decades serving Idaho farms and small businesses.</span></li>
+        <li data-reveal data-delay="3"><b>Ag &amp; small business</b><span>Farm, ranch, sole proprietor, LLC — we know the tax rules for all of them.</span></li>
+        <li data-reveal data-delay="4"><b>Year-round</b><span>Planning and advisory work don't stop in April, and neither do we.</span></li>
       </ul>
     </div>
   </section>
@@ -429,7 +436,7 @@
       <div class="steps">
         <div class="step" data-reveal data-delay="1">
           <h3>Sit down</h3>
-          <p>Start with a free, no-pressure consultation. Bring last year's return and whatever's been keeping you up at night.</p>
+          <p>Start with a $100 consultation — no surprises, no pressure. Bring last year's return and whatever's been keeping you up at night.</p>
         </div>
         <div class="step" data-reveal data-delay="2">
           <h3>Get set up</h3>
@@ -479,7 +486,7 @@
         </details>
         <details data-reveal data-delay="2">
           <summary>Do you work year-round or only at tax time?</summary>
-          <p>Year-round. Bookkeeping, quarterly planning, and advisory work don't stop in April, and neither do we. You'll have someone to call in any season.</p>
+          <p>Year-round. Quarterly planning, advisory work, and farm tax questions don't stop in April, and neither do we. You'll have someone to call in any season.</p>
         </details>
         <details data-reveal data-delay="3">
           <summary>I use QuickBooks / spreadsheets / a shoebox — does that work for you?</summary>
@@ -487,11 +494,11 @@
         </details>
         <details data-reveal data-delay="4">
           <summary>What should I bring to a first consultation?</summary>
-          <p>Last year's tax return, recent bank or bookkeeping statements, and your questions. If you're not sure, just bring what you have — we'll tell you what's missing.</p>
+          <p>Last year's tax return, recent bank statements, and your questions. If you farm or run a business, any income/expense records help. Not sure what to bring — just come anyway, we'll tell you what's missing.</p>
         </details>
         <details data-reveal data-delay="5">
           <summary>How are your fees set?</summary>
-          <p>Fairly and up front. We'll give you a clear estimate before any work begins, so there are no surprises on the invoice.</p>
+          <p>Fairly and up front. Consultations are $100. We'll give you a clear estimate before any additional work begins, so there are no surprises on the invoice.</p>
         </details>
       </div>
     </div>
@@ -501,8 +508,8 @@
     <div class="wrap contact">
       <div class="contact__aside" data-reveal>
         <p class="eyebrow">Let's talk</p>
-        <h2>Book a free consultation</h2>
-        <p>Tell us a little about what you need and we'll be in touch within one business day. Prefer to talk now? Give us a call — a real person will answer.</p>
+        <h2>Book a $100 Consultation</h2>
+        <p>Tell us a little about your operation and we'll be in touch within one business day. Prefer to talk now? Give us a call — a real person will answer.</p>
         <a class="contact__call" href="tel:+12083653239">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           (208) 365-3239
@@ -532,9 +539,10 @@
         <div class="field">
           <label for="cf_help">What can we help with?</label>
           <select id="cf_help" name="help">
-            <option>Tax preparation &amp; planning</option>
-            <option>Bookkeeping</option>
-            <option>Small-business advisory</option>
+            <option>Farm &amp; ranch tax preparation</option>
+            <option>Small-business tax preparation</option>
+            <option>Tax planning</option>
+            <option>Small-business &amp; Ag advisory</option>
             <option>I'm not sure yet</option>
           </select>
         </div>
@@ -567,15 +575,14 @@
         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b4257'/%3E%3Cpath d='M12 48L24 32L36 44L52 24' fill='none' stroke='%236da7cc' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='52' cy='18' r='6' fill='%2388a9c3'/%3E%3C/svg%3E" width="64" height="64" loading="lazy" alt="G&amp;S Accounting seal" />
         <div>
           <span class="brand__name">G&amp;S Accounting, Inc.</span>
-          <p>Tax prep &amp; small-business accounting for Idaho, since 1996.</p>
+          <p>Tax prep &amp; advisory for Idaho farms, ranches, and small businesses since 1996.</p>
         </div>
       </div>
       <div>
         <h4>Services</h4>
         <ul>
           <li><a href="#services">Tax prep &amp; planning</a></li>
-          <li><a href="#services">Bookkeeping</a></li>
-          <li><a href="#services">Advisory</a></li>
+          <li><a href="#services">Ag &amp; small-business advisory</a></li>
         </ul>
       </div>
       <div>
