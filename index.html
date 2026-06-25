@@ -147,17 +147,21 @@
   .ridge { width: 100%; height: auto; display: block; margin-top: clamp(2rem, 6vw, 4rem); color: var(--spruce); }
   .ridge path { fill: none; stroke: currentColor; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
   .ridge .ridge__fill { fill: var(--mist); stroke: none; }
-  .ridge .ridge__sun { fill: var(--accent); stroke: none; }
+  .ridge .ridge__sun { fill: var(--accent); stroke: none; transform-box: view-box; }
   .ridge .ridge__farm * { fill: var(--spruce); stroke: none; }
   .ridge .ridge__farm .ridge__door { fill: color-mix(in srgb, var(--mist) 55%, var(--spruce)); }
   .ridge .ridge__fence { stroke-width: 1.5; }
+  .ridge .ridge__wheat { stroke-width: 1.5; transform-box: fill-box; transform-origin: center bottom; }
   @media (prefers-reduced-motion: no-preference) {
     .ridge .ridge__line { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: draw 4s ease-in-out forwards .2s; }
-    .ridge .ridge__sun { opacity: 0; animation: rise 1s ease forwards 2.8s; }
+    .ridge .ridge__sun { opacity: 0; animation: sunArc 2.5s ease-out forwards 2.8s; }
     .ridge .ridge__farm { opacity: 0; animation: rise 1.2s ease forwards 3.4s; }
+    .ridge .ridge__wheat { transform: scaleY(0); animation: grow 1.8s ease-out forwards 4s; }
   }
   @keyframes draw { to { stroke-dashoffset: 0; } }
   @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes sunArc { from { opacity: 0; transform: translate(2.5%, 48.6%); } to { opacity: 1; transform: translate(0, 0); } }
+  @keyframes grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 
   /* ---- Hero entrance ---- */
   @keyframes heroUp {
@@ -374,7 +378,7 @@
 
     <svg class="ridge" viewBox="0 0 1200 220" preserveAspectRatio="none" role="img" aria-label="Idaho farmland scene with barn and silo">
       <path class="ridge__fill" d="M0 220 L0 183 Q150 179 350 181 Q520 183 650 177 Q710 173 762 171 Q900 166 1200 163 L1200 220 Z" />
-      <circle class="ridge__sun" cx="1050" cy="58" r="18" />
+      <circle class="ridge__sun" cx="570" cy="38" r="18" />
       <g class="ridge__farm">
         <rect x="660" y="134" width="96" height="48" />
         <polygon points="647,134 708,97 773,134" />
@@ -383,6 +387,7 @@
         <path d="M776 114 Q789.5 103 803 114 Z" />
       </g>
       <path class="ridge__fence" d="M55 183 L55 197 M145 182 L145 196 M235 182 L235 196 M325 182 L325 196 M415 181 L415 195 M505 181 L505 195 M595 180 L595 194" />
+      <path class="ridge__wheat" d="M828 168 L828 130 L824 138 M828 130 L832 138 M843 168 L843 124 L839 132 M843 124 L847 132 M858 168 L858 132 L854 140 M858 132 L862 140 M873 168 L873 126 L869 134 M873 126 L877 134 M888 168 L888 121 L884 129 M888 121 L892 129 M903 168 L903 129 L899 137 M903 129 L907 137 M918 168 L918 124 L914 132 M918 124 L922 132 M933 168 L933 131 L929 139 M933 131 L937 139 M948 168 L948 125 L944 133 M948 125 L952 133 M963 168 L963 121 L959 129 M963 121 L967 129 M978 168 L978 130 L974 138 M978 130 L982 138 M993 168 L993 127 L989 135 M993 127 L997 135 M1008 168 L1008 123 L1004 131 M1008 123 L1012 131 M1023 168 L1023 131 L1019 139 M1023 131 L1027 139 M1038 168 L1038 126 L1034 134 M1038 126 L1042 134 M1053 168 L1053 122 L1049 130 M1053 122 L1057 130 M1068 168 L1068 129 L1064 137 M1068 129 L1072 137" />
       <path class="ridge__line" d="M0 183 Q150 179 350 181 Q520 183 650 177 Q710 173 762 171 Q900 166 1200 163" />
     </svg>
   </section>
